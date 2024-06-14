@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calcula tijolos</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 class="texto">Calcula qtde de tijolos na parede</h1>
+        <form method="post" class="form-control">
+            {% csrf_token %}
+            <label>Informe a altura da parede:</label>
+            <input type="text" name="aparede" class="form-control">
+            <p>
+            <label>Informe a largura da parede:</label>
+            <input type="text" name="lparede" class="form-control">
+            <p>
+                <label>Informe a altura do tijolo:</label>
+                <input type="text" name="atijolo" class="form-control">
+                <p>
+                <label>Informe a largura do tijolo:</label>
+                <input type="text" name="ltijolo" class="form-control">
+                <p>
+                <p><button type="submit" class="btn btn-primary">Calcular</button>
+                <p><label>Quantidade de tijolos:</label>
+                <input type="text" value="{{qtde}}" class="form-control">
+                </form>
+                {% if error %}
+                <div style="background-color:red; color:white; box-shadow:2px 2px 2px 2px gray;border-radius:5px;padding:5px">
+                    {{error}}
+                </div>
+                {% endif %}
+                {% for  i in  lista %}
+                 <img src="{% static 'tijolo.jpg' %}" width="40px" height="40">
+                {% endfor %}
+
+            </div>
+</body>
+</html>
+
+        
