@@ -68,7 +68,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projparede.wsgi.application'
+WSGI_APPLICATION = 'projparede.wsgi.app'
 
 
 
