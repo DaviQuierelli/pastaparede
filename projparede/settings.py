@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-!6m8x-)w^+a%2mxw93q2hc35^$t1z8n@xb%fxhf9$rx*(r_0-@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 # Application definition
 
@@ -68,6 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'projparede.wsgi.application'
+
 
 
 # Database
