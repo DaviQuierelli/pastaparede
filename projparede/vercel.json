@@ -8,20 +8,8 @@
         "maxLambdaSize": "15mb",
         "runtime": "Python3.9"
       }
-    },
-    {
-      "src": "build_files.sh",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "staticfiles_build"
-      }
-    }
-  ],
+    }],
   "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/"
-    },
     {
       "src": "/(.*)",
       "dest": "projparede/wsgi.py"
